@@ -11,6 +11,8 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        name: 'posts',
+        path: 'posts',
       },
     },
     `gatsby-transformer-sharp`,
@@ -28,6 +30,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/layout.js'),
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
